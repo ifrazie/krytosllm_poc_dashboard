@@ -1,0 +1,72 @@
+/* Theme Definitions */
+
+/* SOC Dark Theme (Primary) */
+:root {
+  /* Background colors */
+  --bg-primary: #0a0e1a;
+  --bg-secondary: #1a1f2e;
+  --bg-tertiary: #2a2f3e;
+  --bg-surface: var(--bg-secondary);
+  --bg-overlay: rgba(26, 31, 46, 0.95);
+
+  /* Text colors */
+  --text-primary: #ffffff;
+  --text-secondary: #a0a6b8;
+  --text-muted: rgba(160, 166, 184, 0.6);
+  --text-inverse: #0a0e1a;
+
+  /* Border colors */
+  --border-primary: #2a2f3e;
+  --border-secondary: rgba(42, 47, 62, 0.5);
+  --border-focus: var(--color-primary-500);
+
+  /* Interactive colors */
+  --interactive-primary: var(--color-primary-500);
+  --interactive-primary-hover: var(--color-primary-600);
+  --interactive-secondary: var(--color-secondary-500);
+  --interactive-secondary-hover: var(--color-secondary-600);
+
+  /* State colors */
+  --state-hover: rgba(80, 184, 198, 0.1);
+  --state-active: rgba(0, 255, 136, 0.1);
+  --state-focus: rgba(0, 255, 136, 0.2);
+  --state-disabled: rgba(160, 166, 184, 0.3);
+
+  /* Alert severity colors */
+  --severity-critical: #ff4444;
+  --severity-high: #ff8800;
+  --severity-medium: #ffcc00;
+  --severity-low: #44aaff;
+  --severity-info: var(--color-info);
+}
+
+/* Light theme variant (for future use) */
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #e9ecef;
+  --bg-surface: var(--bg-secondary);
+  --bg-overlay: rgba(248, 249, 250, 0.95);
+
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --text-muted: rgba(108, 117, 125, 0.6);
+  --text-inverse: #ffffff;
+
+  --border-primary: #dee2e6;
+  --border-secondary: rgba(222, 226, 230, 0.5);
+  --border-focus: var(--color-primary-500);
+
+  --state-hover: rgba(0, 255, 136, 0.1);
+  --state-active: rgba(0, 255, 136, 0.15);
+  --state-focus: rgba(0, 255, 136, 0.2);
+  --state-disabled: rgba(108, 117, 125, 0.3);
+}
+
+/* High contrast theme */
+[data-theme="high-contrast"] {
+  --border-primary: #666666;
+  --text-secondary: #cccccc;
+  --interactive-primary: #00ffaa;
+  --interactive-secondary: #66ccff;
+}

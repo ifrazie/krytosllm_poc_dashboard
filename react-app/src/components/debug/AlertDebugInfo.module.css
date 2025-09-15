@@ -1,0 +1,119 @@
+/* Alert Debug Info Component Styles */
+
+.debugPanel {
+  margin: var(--space-16) 0;
+  padding: var(--space-16);
+  background: var(--soc-bg-secondary);
+  border: 2px dashed var(--soc-border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+}
+
+.debugTitle {
+  margin: 0 0 var(--space-12) 0;
+  color: var(--soc-text-primary);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.debugGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-8);
+  margin-bottom: var(--space-12);
+}
+
+.debugItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-6) var(--space-8);
+  background: var(--soc-bg-primary);
+  border: 1px solid var(--soc-border);
+  border-radius: var(--radius-sm);
+}
+
+.debugLabel {
+  color: var(--soc-text-secondary);
+  font-weight: 500;
+}
+
+.debugValue {
+  color: var(--soc-accent-primary);
+  font-weight: 600;
+  text-align: right;
+}
+
+.debugDetails {
+  margin-top: var(--space-12);
+}
+
+.debugDetails summary {
+  cursor: pointer;
+  color: var(--soc-text-primary);
+  font-weight: 600;
+  padding: var(--space-4);
+  border-radius: var(--radius-sm);
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.debugDetails summary:hover {
+  background: var(--soc-bg-primary);
+}
+
+.debugDetails summary:focus {
+  outline: 2px solid var(--soc-accent-primary);
+  outline-offset: 2px;
+}
+
+.debugJson {
+  margin: var(--space-8) 0 0 0;
+  padding: var(--space-12);
+  background: var(--soc-bg-primary);
+  border: 1px solid var(--soc-border);
+  border-radius: var(--radius-sm);
+  color: var(--soc-text-primary);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .debugPanel {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .debugPanel {
+    border-width: 3px;
+  }
+  
+  .debugItem {
+    border-width: 2px;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .debugGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .debugItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+  
+  .debugValue {
+    text-align: left;
+  }
+}

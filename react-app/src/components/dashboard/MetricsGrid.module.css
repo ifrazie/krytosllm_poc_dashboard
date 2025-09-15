@@ -1,0 +1,124 @@
+/* MetricsGrid Component Styles */
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.metricCard {
+  background: var(--soc-bg-secondary);
+  border: 1px solid var(--soc-border);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.2s ease;
+}
+
+.metricCard:hover {
+  transform: translateY(-2px);
+}
+
+.metricIcon {
+  font-size: 32px;
+  color: var(--soc-accent-primary);
+  width: 60px;
+  text-align: center;
+}
+
+.metricContent {
+  flex: 1;
+}
+
+.metricContent h3 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 4px 0;
+  color: var(--soc-text-primary);
+}
+
+.metricContent p {
+  margin: 0 0 8px 0;
+  color: var(--soc-text-secondary);
+  font-size: 14px;
+}
+
+.trend {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.trend.positive {
+  color: var(--soc-success);
+  background: rgba(0, 204, 102, 0.1);
+}
+
+.trend.negative {
+  color: var(--soc-critical);
+  background: rgba(255, 68, 68, 0.1);
+}
+
+.trend.neutral {
+  color: var(--soc-text-secondary);
+  background: var(--soc-bg-tertiary);
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+}
+
+.error {
+  color: var(--color-error);
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .metricsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  
+  .metricCard {
+    padding: var(--space-4);
+  }
+  
+  .metricIcon {
+    width: 40px;
+    height: 40px;
+    font-size: var(--font-size-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .metricsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-3);
+  }
+  
+  .metricCard {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-4);
+  }
+  
+  .metricContent h3 {
+    font-size: var(--font-size-xl);
+  }
+}

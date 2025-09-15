@@ -1,0 +1,19 @@
+/* ThreatHunting Component Styles */
+
+.container {
+  /* Add component-specific styles here */
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: var(--color-text-secondary);
+}
+
+.error {
+  color: var(--color-error);
+  padding: 1rem;
+  text-align: center;
+}
